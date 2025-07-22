@@ -1,0 +1,9 @@
+:root{
+    --cor-de-fundo: #eeeeee;
+    --cor-principal: #ffff00;
+    --cor-do-texto: #333333;
+    --cor-terciaria: #44494e;
+    --cor-de-fundo-do-topo: #202020;
+    --fonte: 'arial', sans-serif;
+    --tamanho-da-fonte: 16px;
+}
