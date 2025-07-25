@@ -1,0 +1,21 @@
+footer{
+    background-color: var(--cor-terciaria);
+    width: 100%;
+}
+footer .container{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.coluna-footer{
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-de-fundo);
+}
+.redes-sociais{
+    width: 30px;
+    height: 30px;
+    padding: 10px 0 0 0;
+}

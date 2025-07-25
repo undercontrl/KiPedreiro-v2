@@ -1,5 +1,5 @@
 .container-servicos{
-    height: 450px;
+    height: 480px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -57,4 +57,23 @@
 .card-servico:hover .figcaption-servico{
     transform: translateY(0%);
     backdrop-filter: blur(2px);
+}
+.botao-servicos-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.botao-servicos{
+    background-color: #27292c;
+    color: var(--cor-de-fundo);
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.botao-servicos:hover{
+    background-color: rgb(255, 214, 30);
+    color: var(--cor-terciaria);
 }
