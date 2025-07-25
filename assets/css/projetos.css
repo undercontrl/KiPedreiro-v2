@@ -67,8 +67,8 @@
     padding-top: 50px;
 }
 .botao-projetos{
-    background-color: #27292c;
-    color: var(--cor-de-fundo);
+    background-color: rgb(255, 214, 30);
+    color: var(--cor-terciaria);
     padding: 20px 20px;
     border: none;
     border-radius: 5px;
@@ -76,8 +76,8 @@
     font-size: 1.2rem;
 }
 .botao-projetos:hover{
-    background-color: rgb(255, 214, 30);
-    color: var(--cor-terciaria);
+    background-color: #27292c;
+    color: var(--cor-de-fundo);
 }
 #projeto-imagem-1{
     border-radius: 20px 0 0 0;
