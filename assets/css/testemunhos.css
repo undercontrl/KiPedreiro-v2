@@ -1,0 +1,17 @@
+.testemunhos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--cor-terciaria);
+    padding: 30px 30px;
+}
+.titulo-testemunho{
+    color: var(--cor-de-fundo);
+}
+.section-testemunhos{
+    display: flex;
+    
+}

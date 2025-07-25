@@ -11,7 +11,7 @@
 }
 .card-processo{
     flex-basis: calc(25% - 10px);
-    height: 200px;
+    height: 250px;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
