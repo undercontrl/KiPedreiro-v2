@@ -77,3 +77,44 @@
     background-color: rgb(255, 214, 30);
     color: var(--cor-terciaria);
 }
+
+/* CSS da página servicos.html: */
+
+.cards-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.card-servico-pagina{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+/* .servico-imagem-pagina{
+   
+} */
+.figure-pagina-servicos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+}
+.container-servicos-pagina{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 480px;
+    width: 480px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.figcaption-servico-pagina{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
