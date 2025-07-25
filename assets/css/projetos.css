@@ -32,7 +32,6 @@
     cursor: pointer;    
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .projeto-imagem{
     width: 100%;
@@ -79,4 +78,16 @@
 .botao-projetos:hover{
     background-color: rgb(255, 214, 30);
     color: var(--cor-terciaria);
+}
+#projeto-imagem-1{
+    border-radius: 20px 0 0 0;
+}
+#projeto-imagem-2{
+    border-radius: 0 20px 0 0;
+}
+#projeto-imagem-3{
+    border-radius: 0 0 0 20px;
+}
+#projeto-imagem-4{
+    border-radius: 0 0 20px 0;
 }

@@ -2,6 +2,20 @@ header{
     display: flex;
     flex-direction: column;
 }
+span{
+    position: relative;
+    font-size: 1em;
+    color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
 .menu-secundario{
     display: flex;
     flex-direction: row;
@@ -25,9 +39,10 @@ header{
     align-items: center;
     padding: 10px 20px;
     gap: 20px;
+    font-size: 1.2em;
 }
 .logo{
-    width: 300px;
+    width: 350px;
 }
 .menu-nav{
     display: flex;
