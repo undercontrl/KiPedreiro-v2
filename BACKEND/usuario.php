@@ -18,7 +18,7 @@ function registrarUsuario($db, $nome, $email, $senha){
     $statment->bindParam(':senha', $senha);
     return $statment->execute();
 }
-$ok = registrarUsuario($db, 'Ariane', 'Ariane@xxx.com', '5132053210');
-echo $ok ? 'Usuário registrado com sucesso' : 'Erro ao registrar usuário';
+// $ok = registrarUsuario($db, 'Ariane', 'Ariane@xxx.com', '5132053210');
+// echo $ok ? 'Usuário registrado com sucesso' : 'Erro ao registrar usuário';
 // $resultado = buscaUsuario($db);
 // var_dump($resultado);
