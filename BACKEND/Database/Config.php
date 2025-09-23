@@ -1,6 +1,6 @@
 <?php
 
-namespace Fast\Back\Database;
+namespace App\Kipedreiro\Database;
 
 class Config
 {
