@@ -8,7 +8,7 @@ class usuarioController {
     public $usuario;
     public $db;
     public function __construct(){
-        $this->db = Database::getInstance()->getConnection();
+        $this->db = Database::getInstance();
         $this->usuario = new usuario($this->db);
     }
     //  index
