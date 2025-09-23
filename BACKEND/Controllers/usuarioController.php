@@ -6,7 +6,7 @@ use App\Kipedreiro\Models\usuario;
 
 class usuarioController {
     public $usuario;
-    public $db
+    public $db;
     public function __construct(){
         $this->db = Database::getInstance()->getConnection();
         $this->usuario = new usuario($this->db);
