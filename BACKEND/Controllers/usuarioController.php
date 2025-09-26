@@ -5,8 +5,7 @@ use App\Kipedreiro\Database\database;
 use App\Kipedreiro\Models\usuario;
 
 class usuarioController {
-    public $usuario;
-    public $db;
+    public $usuario;                 
     public function __construct(){
         $this->db = Database::getInstance();
         $this->usuario = new usuario($this->db);
