@@ -1,8 +1,14 @@
 <?php
 namespace App\Kipedreiro;
 require __DIR__.'/../vendor/autoload.php';
+
+if(!isset($_SESSION)){
+    session_start();
+}
+
 use App\Kipedreiro\Rotas\Rotas;
  
+
 $rotas = Rotas::get();
  
 $metodoHttp = $_SERVER["REQUEST_METHOD"];
