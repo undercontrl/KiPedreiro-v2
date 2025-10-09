@@ -43,7 +43,17 @@ class UsuarioController{
     }
     public function viewListarUsuarios(){
         $dados = $this->usuario->buscarUsuarios();
-        View::render("usuario/index", ["usuarios" => $dados]);
+        $total_usuarios = $this->usuario->buscarTotalUsuarios();
+        $total_inativos = $this->usuario->buscarUsuariosInativos();
+        $total_ativos = $this->usuario->buscarUsuariosAtivos();
+        View::render("usuario/index", 
+            [
+                "usuarios" => $dados, 
+                "total_usuarios"=>$total_usuarios[0],
+                "total_inativos"=>$total_inativos[0],
+                "total_ativos"=>$total_ativos[0]
+            ]
+        );
     }
     public function viewCriarUsuarios(){
         View::render("usuario/create");

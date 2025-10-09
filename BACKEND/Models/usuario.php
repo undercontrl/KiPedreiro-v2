@@ -24,7 +24,28 @@ class Usuario{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
+    // metodo de buscar todos os usuarios
+    function buscarTotalUsuarios(){
+        $sql = 'SELECT COUNT(*) AS total_usuarios FROM tbl_usuario where excluido_em IS NULL';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+    // metodo de buscar todos os usuarios inativos
+    function buscarUsuariosInativos(){
+        $sql = 'SELECT COUNT(*) AS total_inativos FROM tbl_usuario where status_usuario = "inativo" AND excluido_em IS NULL';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+    // metodo de buscar todos os usuarios inativos
+    function buscarUsuariosAtivos(){
+        $sql = 'SELECT COUNT(*) AS total_ativos FROM tbl_usuario where status_usuario = "ativo" AND excluido_em IS NULL';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }    
     //metodo de buscar todos usuario por email
     function buscarUsuariosPorEmail($email){
         $sql = 'SELECT * FROM tbl_usuario where email_usuario = :email and excluido_em IS NULL';
