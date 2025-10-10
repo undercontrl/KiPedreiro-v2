@@ -41,17 +41,18 @@ class UsuarioController{
         $resultado = $this->usuario->buscarUsuarios();
         var_dump($resultado);
     }
-    public function viewListarUsuarios(){
-        $dados = $this->usuario->buscarUsuarios();
+    public function viewListarUsuarios($pagina){
+        $dados = $this->usuario->paginacao($pagina);
         $total_usuarios = $this->usuario->buscarTotalUsuarios();
         $total_inativos = $this->usuario->buscarUsuariosInativos();
         $total_ativos = $this->usuario->buscarUsuariosAtivos();
         View::render("usuario/index", 
             [
-                "usuarios" => $dados, 
+                "usuarios" => $dados['data'], 
                 "total_usuarios"=>$total_usuarios[0],
                 "total_inativos"=>$total_inativos[0],
-                "total_ativos"=>$total_ativos[0]
+                "total_ativos"=>$total_ativos[0],
+                "paginacao" => $dados
             ]
         );
     }
