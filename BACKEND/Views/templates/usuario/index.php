@@ -47,7 +47,9 @@
   </div>
  
 <div>Listar Usuarios</div>
-<?php if (isset($usuarios) && count($usuarios) > 0): ?>
+<?php
+ 
+if (isset($usuarios) && count($usuarios) > 0): ?>
  <table border="1" cellpadding="5" cellspacing="0" class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
     <thead>
         <tr>
