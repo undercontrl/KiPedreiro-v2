@@ -6,7 +6,10 @@ use App\Kipedreiro\Models\Usuario;
 use App\Kipedreiro\Database\Database;
 use App\Kipedreiro\Core\View;
 use App\Kipedreiro\Core\Redirect;
+use App\Kipedreiro\Core\Session;
 use App\Kipedreiro\Validadores\UsuarioValidador; 
+use App\Kipedreiro\Controllers\Admin\AdminController;
+use App\Kipedreiro\Controllers\Admin\AuthenticatedController;
 
 class UsuarioController{
     public $usuario;

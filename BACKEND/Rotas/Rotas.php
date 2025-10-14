@@ -16,14 +16,20 @@ class Rotas
         "/usuario/excluir/{id}" => "UsuarioController@viewExcluirUsuarios",
         "/usuario/{id}/relatorio/{dataInicial}/{dataFinal}" => "UsuarioController@relatorioUsuario",
         
-        
+        "/register" => "AuthController@register",
+        "/login" => "AuthController@login",
+        "/logout" => "AuthController@logout",
+        "/admin/dashboard" => "Admin\DashboardController@index",
+
     ],
     "POST" => [
-        "/usuario/salvar" => "UsuarioController@salvarUsuario",
-        "/usuario/atualizar/{id}" => "UsuarioController@atualizarUsuario",
-        "/usuario/deletar/{id}" => "UsuarioController@deletarUsuario",
-        
-    ]
+            "/usuario/salvar" => "UsuarioController@salvarUsuario",
+            "/usuario/atualizar/{id}" => "UsuarioController@atualizarUsuario",
+            "/usuario/deletar/{id}" => "UsuarioController@deletarUsuario",
+            
+            "/register" => "AuthController@cadastrarUsuario",
+            "/login" => "AuthController@authenticar",
+        ]
         ];
     }
 }

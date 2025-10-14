@@ -147,4 +147,14 @@ class Usuario{
             return false;
         }
     }
+    public function checarCredenciais(string $email, string $senha){
+        $usuario = $this->buscarUsuariosPorEmail($email);
+        if(count($usuario) != 1){
+            return false;
+        }
+        if (password_verify($senha, $usuario['senha_usuario'])) {
+            return $usuario;
+        }
+        return false;
+    }
 }
