@@ -95,7 +95,7 @@ class Usuario{
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $email);
+        $stmt->bindParam(':senha', $senha);
         $stmt->bindParam(':tipo', $tipo);
         $stmt->bindParam(':status', $status);
         $stmt->bindParam(':foto', $imagem);
@@ -121,7 +121,7 @@ class Usuario{
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $email);
+        $stmt->bindParam(':senha', $senha);
         $stmt->bindParam(':tipo', $tipo);
         $stmt->bindParam(':status', $status);
         $stmt->bindParam(':atual', $dataatual);
@@ -149,9 +149,10 @@ class Usuario{
     }
     public function checarCredenciais(string $email, string $senha){
         $usuario = $this->buscarUsuariosPorEmail($email);
-        if(count($usuario) != 1){
+        if(count($usuario) !== 1){
             return false;
         }
+        $usuario = $usuario[0];
         if (password_verify($senha, $usuario['senha_usuario'])) {
             return $usuario;
         }

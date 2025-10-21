@@ -10,12 +10,14 @@ use App\Kipedreiro\Core\Session;
 use App\Kipedreiro\Validadores\UsuarioValidador; 
 use App\Kipedreiro\Controllers\Admin\AdminController;
 use App\Kipedreiro\Controllers\Admin\AuthenticatedController;
+use App\Kipedreiro\Controllers\Admin\PedreiroController;
 
-class UsuarioController{
+class UsuarioController extends PedreiroController{
     public $usuario;
     public $db;
     public $gerenciarImagem;
     public function __construct() {
+        parent::__construct();
         $this->db = Database::getInstance();
         $this->usuario = new Usuario($this->db);
         $this->gerenciarImagem = new FileManager('upload');
